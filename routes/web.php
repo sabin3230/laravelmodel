@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UserRegistrationController;
+use App\Models\UserRegistration;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,3 +25,9 @@ Route::get('nepal', [HomeController::class, 'index']);
 Route::post('contact', [HomeController::class, 'store'])->name('homepage.store'); 
 
 Route::get('category', [HomeController::class, 'list']);
+
+Route::get('register', [UserRegistrationController::class, 'index']);
+
+Route::post('/register', [UserRegistrationController::class, 'register']);
+
+Route::get('/list', [UserRegistrationController::class, 'show']);

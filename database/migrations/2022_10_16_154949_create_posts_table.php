@@ -20,11 +20,7 @@ return new class extends Migration
             $table->longText('message');
             $table->timestamps();
 
-            $table->bigInteger('c_id')->unsigned();
-            $table->foreign('c_id')
-                  ->references('p_id')
-                  ->on('category')->onDelete('cascade');
-            $table->timestamps();
+
         });
     }
 
